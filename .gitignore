@@ -1,0 +1,4 @@
+**/.DS_Store
+
+# Keep historical and eval artifacts local.
+evals/**
