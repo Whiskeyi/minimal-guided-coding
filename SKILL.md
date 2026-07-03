@@ -1,5 +1,5 @@
 ---
-name: zcj411020-minimal-guided-coding
+name: minimal-guided-coding
 description: "Converges source code changes during guided / vibe coding sessions: enforces minimal-complete edits, thoroughly removes superseded-scheme residue, and produces reviewer-friendly CRs. MUST be loaded when editing source code and any of these signals appear in conversation: minimal change, too much diff, don't over-modify, converge changes, switch from scheme A to B, earlier changes were wrong, revert changes, legacy code residue, clean up residue, CR is unclear, too many comments. Even without explicit keywords, proactively load this Skill when the conversation exhibits diff bloat, superseded-scheme sedimentation, or declining review readability. NOT applicable: greenfield features, large-scale refactors, new module scaffolding, or routine incremental development."
 ---
 
