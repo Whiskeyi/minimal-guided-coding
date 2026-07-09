@@ -1,5 +1,7 @@
 # minimal-guided-coding
 
+Language: [English](./README.md) | [简体中文](./README.zh-CN.md)
+
 ## Pain Points
 
 In vibe coding / guided programming, incremental adjustments easily balloon from "small change" to "large change":
