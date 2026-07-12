@@ -1,4 +1,6 @@
 **/.DS_Store
 
-# Keep historical and eval artifacts local.
+# Keep generated eval artifacts local while tracking the canonical eval set.
 evals/**
+!evals/
+!evals/evals.json

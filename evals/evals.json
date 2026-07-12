@@ -1,0 +1,94 @@
+[
+  {
+    "query": "That last approach was not right. I do not want to use EventEmitter anymore, so switch it back to calling the callback directly. Remove all the emitter-related imports and helpers that were added earlier, and keep only the minimal changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is this diff not way too large? I only wanted to extract fetchUser from the class component into a hook, but you also changed the ErrorBoundary, routing configuration, and mocks. Please narrow the scope of the changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Earlier, I asked you to use approach A by lifting the state into context. When that did not work, I asked you to switch to approach B with Zustand. But there are still a lot of createContext and useContext remnants in the code. Please clean them up completely.",
+    "should_trigger": true
+  },
+  {
+    "query": "I reviewed your changes to src/services/order.ts, and several lines say '// TODO: Legacy compatibility, remove later'. We already decided in the previous round that we no longer want that legacy logic, so delete those comments and the corresponding if branches.",
+    "should_trigger": true
+  },
+  {
+    "query": "How is a reviewer supposed to make sense of this CR? The diff spans seven files and mixes feature additions, formatting, and renaming. Can you keep only the changes directly related to this request and revert everything else?",
+    "should_trigger": true
+  },
+  {
+    "query": "Revert the changes above. I only need a try-catch around await api.save() inside handleSubmit; there is no need to add a global error boundary.",
+    "should_trigger": true
+  },
+  {
+    "query": "You previously added a formatPrice function to utils/format.ts, but I later said that using Intl.NumberFormat was enough. The old formatPrice function and its test case are still around, so remove both of them.",
+    "should_trigger": true
+  },
+  {
+    "query": "This PR touches more than 20 files, but the core logic is only in src/hooks/useAuth.ts. Everything else is automatic formatting or unnecessary type annotations. The diff is too bloated and difficult to review.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do not overhaul everything. I only want config.apiBaseUrl to read from an environment variable instead of being hard-coded, but you ended up rewriting the Axios instance wrapper and retry logic too. I only need that one-line change.",
+    "should_trigger": true
+  },
+  {
+    "query": "Lines 45 through 78 in src/components/Table/index.tsx contain the old offset-based pagination logic from when I previously asked you to add pagination. I later asked you to switch to cursor-based pagination, but the old code is still there as a commented-out block. Delete it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a new user management module with four CRUD endpoints. The frontend should include a list page, a detail page, and an edit form, using React, Ant Design, and Zustand for state management.",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to migrate the entire project from webpack to Vite, including replacing all loader and plugin configurations as well as the dev server and build commands.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a new RealtimeChart component under src/pages/dashboard. Use ECharts to display real-time WebSocket data as a line chart, with automatic reconnection and data buffering.",
+    "should_trigger": false
+  },
+  {
+    "query": "Please write the API documentation in docs/api.md and add the request and response schemas for the /api/v2/orders endpoints.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a getWeekRange function to src/utils/date.ts. It should accept a date and return the start and end dates of that week, with Monday as the first day of the week.",
+    "should_trigger": true
+  },
+  {
+    "query": "We need a major refactor: convert all class components under src/legacy/ to function components with hooks. There are roughly 40 files involved.",
+    "should_trigger": false
+  },
+  {
+    "query": "Performance is a bit poor. Check whether the useEffect in src/pages/ProductList.tsx is causing unnecessary re-renders, and optimize it with useMemo and useCallback.",
+    "should_trigger": true
+  },
+  {
+    "query": "Update README.md. The startup command has changed from npm start to pnpm dev, and the environment variable documentation also needs to be revised.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add WeChat Pay integration to src/services/payment.ts by introducing two functions: createWxPayOrder and queryWxPayStatus.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a set of unit tests for the OrderList component covering an empty list, loading state, page changes, and filter changes, using Vitest and Testing Library.",
+    "should_trigger": false
+  },
+  {
+    "query": "In Chapter 3, 'Architecture Design', of docs/design-spec.md, change 'microservices' to 'monolithic application' and update the architecture diagram description below it as well.",
+    "should_trigger": false
+  },
+  {
+    "query": "The v2.3.0 release notes in CHANGELOG.md are unclear. Replace 'fix bug' with specific descriptions of the fixes; there are about five entries to revise.",
+    "should_trigger": false
+  },
+  {
+    "query": "Update Section 2, 'Environment Setup', of the 'New Hire Onboarding Guide' in the wiki. Change Node.js 14 to Node.js 20 and revise the brew install instructions as well.",
+    "should_trigger": false
+  }
+]
